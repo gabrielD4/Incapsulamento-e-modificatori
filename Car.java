@@ -18,10 +18,11 @@ public class Car {
                 '}';
     }
 
-
     public Car(String brand, String model, String plate, int enginePower) throws Exception {
         this.brand = brand;
         this.model = model;
+        // With this exception I want the program to stop if the plate doesn't match the requirements,
+        // and to alert the user that they tried to insert a not valid plate license number.
         if (plate != null && plate.length() == 7) {
             if (plate.matches("^[a-zA-Z0-9]*$")) {
                 this.plate = plate;
